@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "eBay Kleinanzeigen Filter",
+  "version": "0.3.4",
+  "description": "Filtert unerwünschte Ergebnisse aus der Suche von Ebay Kleinanzeigen heraus.",
+  "author": "Rudolf Unruh",
+  "icons": {"96": "images/icon_96.png"},
+  "offline_enabled": false,
+  "permissions": ["storage"],
+  "host_permissions": ["*://www.ebay-kleinanzeigen.de/*"],
+
+  "web_accessible_resources": [{
+    "resources": ["templates.html", "images/*.png"],
+    "matches": ["<all_urls>"]
+  }],
+  "content_scripts": [{
+    "matches": ["*://www.ebay-kleinanzeigen.de/s-*"],
+    "js": [
+      "storage_functions.js",
+      "filter_applier.js",
+      "menu_component.js",
+      "settings_component.js",
+      "content_script.js"],
+    "css": ["style.css"],
+    "run_at": "document_idle"
+  }]
+}

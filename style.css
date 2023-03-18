@@ -1,0 +1,231 @@
+/* From original website */
+.ruekaf {
+  --kds-sema-border-radius-accordion: var(--kds-sema-border-radius-none);
+  --kds-sema-border-radius-attention-badge: var(--kds-sema-border-radius-full);
+  --kds-sema-border-radius-badge: var(--kds-sema-border-radius-large);
+  --kds-sema-border-radius-button: var(--kds-sema-border-radius-medium);
+  --kds-sema-border-radius-cards: var(--kds-sema-border-radius-small);
+  --kds-sema-border-radius-checkbox: var(--kds-sema-border-radius-small);
+  --kds-sema-border-radius-counter: var(--kds-sema-border-radius-small);
+  --kds-sema-border-radius-divider: var(--kds-sema-border-radius-none);
+  --kds-sema-border-radius-feedback-notification: var(--kds-sema-border-radius-medium);
+  --kds-sema-border-radius-filter-chips: var(--kds-sema-border-radius-full);
+  --kds-sema-border-radius-full: 48px;
+  --kds-sema-border-radius-input-field: var(--kds-sema-border-radius-medium);
+  --kds-sema-border-radius-large: 16px;
+  --kds-sema-border-radius-list: var(--kds-sema-border-radius-small);
+  --kds-sema-border-radius-medium: 8px;
+  --kds-sema-border-radius-none: 0px;
+  --kds-sema-border-radius-offer-box-chat: var(--kds-sema-border-radius-medium);
+  --kds-sema-border-radius-open-text-field-chat: var(--kds-sema-border-radius-medium);
+  --kds-sema-border-radius-page-control: var(--kds-sema-border-radius-full);
+  --kds-sema-border-radius-price-tag: var(--kds-sema-border-radius-none);
+  --kds-sema-border-radius-radio-button: var(--kds-sema-border-radius-full);
+  --kds-sema-border-radius-select-field: var(--kds-sema-border-radius-medium);
+  --kds-sema-border-radius-small: 4px;
+  --kds-sema-border-radius-tab-navigation: var(--kds-sema-border-radius-none);
+  --kds-sema-border-radius-toggle: var(--kds-sema-border-radius-full);
+  --kds-sema-border-radius-tooltip: var(--kds-sema-border-radius-small);
+  --kds-sema-border-radius-xsmall: 2px;
+  --kds-sema-color-background-subdued: #F4F4F4;
+  --kds-sema-color-background: #FFFFFF;
+  --kds-sema-color-critical: #E53238;
+  --kds-sema-color-feature-bumpup: #86B817;
+  --kds-sema-color-feature-gallery: #F5AF02;
+  --kds-sema-color-feature-highlight-container: #FDF3D9;
+  --kds-sema-color-feature-highlight: #ED6D00;
+  --kds-sema-color-feature-top: #0064D2;
+  --kds-sema-color-interactive: #508200;
+  --kds-sema-color-inverse-surface: #202020;
+  --kds-sema-color-on-background: #202020;
+  --kds-sema-color-on-inverse-surface: #FFFFFF;
+  --kds-sema-color-on-primary-variant: #FFFFFF;
+  --kds-sema-color-on-primary: #FFFFFF;
+  --kds-sema-color-on-surface-nonessential: #797979;
+  --kds-sema-color-on-surface-subdued: #4D4D4D;
+  --kds-sema-color-on-surface: #202020;
+  --kds-sema-color-primary-container: #ECF4DA;
+  --kds-sema-color-primary-on-container: #508200;
+  --kds-sema-color-primary-variant: #508200;
+  --kds-sema-color-primary: #f00;
+  --kds-sema-color-primary: #86B817;
+  --kds-sema-color-surface-subdued: #F4F4F4;
+  --kds-sema-color-surface: #FFFFFF;
+  --kds-sema-color-urgent: #ED6D00;
+  --kds-sema-color-utility-nonessential: #E9E9E9;
+  --kds-sema-color-utility-subdued: #D2D2D2;
+  --kds-sema-color-utility: #A6A6A6;
+  --kds-unmapped-border-radius-box: var(--kds-sema-border-radius-small);
+  --kds-unmapped-border-radius-contentbox: var(--kds-sema-border-radius-xsmall);
+  --kds-unmapped-border-radius-form: var(--kds-sema-border-radius-small);
+  --kds-unmapped-border-radius-formcontrol: var(--kds-sema-border-radius-medium);
+  --kds-unmapped-border-radius-gallery: var(--kds-sema-border-radius-small);
+  --kds-unmapped-border-radius-modal: var(--kds-sema-border-radius-medium);
+  --kds-unmapped-border-radius-pagination: var(--kds-sema-border-radius-medium);
+  --kds-unmapped-border-radius-saved-searches-badge: var(--kds-sema-border-radius-medium);
+  --kds-unmapped-border-radius-tile: var(--kds-sema-border-radius-xsmall);
+  --kds-unmapped-interactive-hover: #76A811;
+  --kds-unmapped-interactive-visited: #0064D2;
+  --kds-unmapped-is-selected: #F1F5F8;
+  --kds-unmapped-rgba-color-interactive: 80, 130, 0;
+  --kds-unmapped-rgba-color-neutral: 32, 32, 32;
+  --kds-unmapped-rgba-color-on-surface-subdued: 244, 244, 244;
+  --kds-unmapped-rgba-color-on-surface: 20, 20, 20;
+  --kds-unmapped-rgba-color-surface-subdued: 240, 240, 240;
+  --kds-unmapped-rgba-color-surface: 255, 255, 255;
+  --kds-unmapped-secondary-interactive-active: #E7F1D4;
+  --kds-unmapped-secondary-interactive-hover: #F3F8E8;
+  --kds-unmapped-sema-color-feature-bumpup: #9FC747;
+  --kds-unmapped-sema-color-input-subdued: #FCFCFC;
+  -webkit-text-size-adjust: 100%;
+}
+
+.ruekaf-container {
+  position: fixed;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+  background-color: #fff;
+}
+
+.ruekaf-menu {
+  display: flex;
+  bottom: 0;
+  left: 0;
+  width: 256px;
+}
+
+.ruekaf-settings {
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  min-width: 256px;
+  max-width: 512px;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+.ruekaf-settings-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .25);
+}
+
+.ruekaf-menu-logo {
+  margin-right: 1em;
+}
+
+.ruekaf-menu-logo img {
+  max-height: 48px;
+}
+
+.ruekaf-hidden-item {
+  display: none !important;
+}
+
+.ruekaf-mb-0 {
+  margin-bottom: 0;
+}
+
+.ruekaf-mt-0 {
+  margin-top: 0;
+}
+
+/* From original website */
+.ruekaf-button {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: right;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 700;
+    padding: 0px 16px;
+    outline: none;
+    white-space: nowrap;
+    border: none;
+    background-color: var(--kds-sema-color-primary);
+    border-radius: var(--kds-sema-border-radius-button);
+    box-sizing: border-box;
+    color: var(--kds-sema-color-on-primary);
+    min-height: 44px;
+    height: 44px;
+    line-height: 130%;
+    font-size: 14px;
+    width: auto;
+}
+
+/* From original website */
+.ruekaf-button-outline {
+  list-style-type: none;
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  flex-direction: row;
+  line-height: 130%;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0px 16px;
+  outline: none;
+  white-space: nowrap;
+  border-radius: 8px;
+  box-sizing: border-box;
+  min-height: 44px;
+  height: 44px;
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
+  color: var(--kds-sema-color-interactive);
+  background: none;
+  background-color: var(--kds-sema-color-surface);
+  border: 1px solid var(--kds-sema-color-primary);
+  box-shadow: none;
+}
+
+/* From original website */
+.ruekaf-pro-badge {
+  text-size-adjust: 100%;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  list-style-type: none;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  line-height: normal;
+  color: var(--kds-sema-color-on-primary);
+  background-color: var(--kds-sema-color-primary);
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin: 0px 8px 0px 0px;
+  font-size: 10px;
+  border-radius: var(--kds-sema-border-radius-badge);
+  padding: 4px 8px;
+}
+
+/* From original website */
+.ruekaf-checkbox {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  line-height: normal;
+  box-sizing: border-box;
+  padding: 0;
+  margin-right: 7px;
+  accent-color: var(--kds-sema-color-interactive);
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}

@@ -1,0 +1,65 @@
+<template id="ruekaf-menu">
+  <div class="ruekaf ruekaf-menu ruekaf-container">
+    <div class="ruekaf-menu-logo">
+      <img src="." alt="Ebay Kleinanzeigen Filter">
+    </div>
+    <div class="ruekaf-menu-content">
+      <p class="ruekaf-mt-0">
+        <strong data-message-filtered hidden>
+          <span data-filtered-count></span> Anzeigen rausgefiltert.
+        </strong>
+        <span data-message-disabled hidden>
+          Filter deaktiviert.
+        </span>
+      </p>
+      <p class="ruekaf-mb-0">
+        <a href="#" data-edit>Filter bearbeiten</a>
+        |
+        <a href="#" data-enable hidden>aktivieren</a>
+        <a href="#" data-disable hidden>deaktivieren</a>
+      </p>
+    </div>
+  </div>
+</template>
+
+<template id="ruekaf-settings">
+  <div class="ruekaf ruekaf-container ruekaf-settings" hidden>
+    <form>
+      <h1>Filtereinstellungen</h1>
+      <p>
+        Trage hier unerwünschte Begriffe ein. Artikel, in deren Titel diese Wörter vorkommen, werden automatisch rausgefiltert.
+      </p>
+      <ul>
+        <li>Ein Begriff pro Zeile.</li>
+        <li>Groß-/Kleinschreibung spielt keine Rolle.</li>
+      </ul>
+
+      <div class="formgroup">
+        <textarea name="" cols="30" rows="10" placeholder="Beispiel:
+porzellan
+kinderschuhe
+winterreifen
+..."></textarea>
+      </div>
+
+      <div style="text-align: right;">
+        <a href="#" data-sort> alphabet. sortieren</a>
+      </div>
+
+      <h2>Weitere Optionen</h2>
+      <div class="formgroup">
+        <div class="formgroup-input" style="width: 100%;">
+          <label>
+            <input class="ruekaf-checkbox" type="checkbox" value="true">
+            Alle <div class="ruekaf-pro-badge" style="margin-right: 4px;">PRO</div>-Anzeigen rausfiltern
+          </label>
+        </div>
+      </div>
+
+      <div style="text-align: right;">
+        <a class="ruekaf-button-outline" href="#" data-save>Speichern</a> <a
+            class="ruekaf-button-outline" href="#" data-close>Schließen</a>
+      </div>
+    </form>
+  </div>
+</template>
