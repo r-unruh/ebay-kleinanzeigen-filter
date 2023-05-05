@@ -1,20 +1,20 @@
 {
   "manifest_version": 3,
-  "name": "eBay Kleinanzeigen Filter",
-  "version": "0.3.4",
-  "description": "Filtert unerwünschte Ergebnisse aus der Suche von Ebay Kleinanzeigen heraus.",
+  "name": "Kleinanzeigen.de Filter",
+  "version": "0.4.0",
+  "description": "Filtert unerwünschte Ergebnisse aus der Suche von Kleinanzeigen.de heraus.",
   "author": "Rudolf Unruh",
   "icons": {"96": "images/icon_96.png"},
   "offline_enabled": false,
   "permissions": ["storage"],
-  "host_permissions": ["*://www.ebay-kleinanzeigen.de/*"],
+  "host_permissions": ["*://www.kleinanzeigen.de/*"],
 
   "web_accessible_resources": [{
     "resources": ["templates.html", "images/*.png"],
     "matches": ["<all_urls>"]
   }],
   "content_scripts": [{
-    "matches": ["*://www.ebay-kleinanzeigen.de/s-*"],
+    "matches": ["*://www.kleinanzeigen.de/s-*"],
     "js": [
       "storage_functions.js",
       "filter_applier.js",
