@@ -89,6 +89,7 @@
 }
 
 .rukaf-menu {
+  z-index: 140;
   display: flex;
   bottom: 0;
   left: 0;
@@ -96,7 +97,7 @@
 }
 
 .rukaf-settings {
-  z-index: 10;
+  z-index: 150;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
