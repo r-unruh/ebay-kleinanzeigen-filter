@@ -11,7 +11,7 @@ function addImageToImageBox(imageBox) {
   if (src !== null) {
     const image = document.createElement('img');
     image.src = src;
-    image.setAttribute('data-added-by-eka-filter', true);
+    image.setAttribute('data-added-by-rukaf', true);
     imageBox.appendChild(image);
   }
 }
@@ -20,7 +20,7 @@ function addImageToImageBox(imageBox) {
 function preventDoubleImages(imageBox) {
   const observer = new MutationObserver(() => {
     if (imageBox.querySelectorAll('img').length > 1)
-      imageBox.querySelector('img[data-added-by-eka-filter]').remove();
+      imageBox.querySelector('img[data-added-by-rukaf]').remove();
   });
   observer.observe(imageBox, {subtree: true, childList: true});
 }
