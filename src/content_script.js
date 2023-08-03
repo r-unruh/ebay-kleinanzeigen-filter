@@ -1,33 +1,25 @@
 async function main() {
-  await loadTemplates();
+  // Load HTML
+  const res = await fetch(chrome.runtime.getURL('templates.html'));
+  const html = await res.text();
+  document.querySelector('body').insertAdjacentHTML('beforeend', html);
 
-  const filterApplier = new FilterApplier();
+  // Setup components
   const settingsComponent = new SettingsComponent('#ruekaf-settings');
-  const menu = new MenuComponent(
-      '#ruekaf-menu', filterApplier, settingsComponent);
-
-  if (await getIsFilterEnabled()) {
-    await filterApplier.apply();
-    await menu.render();
-  }
+  const menu = new MenuComponent('#ruekaf-menu', settingsComponent);
 
   settingsComponent.addEventListener('update', async () => {
     if (await getIsFilterEnabled()) {
-      filterApplier.undo();
-      await filterApplier.apply();
+      undoFilters();
+      await applyFilters();
       await menu.render();
     }
   });
-}
 
-async function loadTemplates() {
-  const html = await getHtml('templates.html');
-  document.querySelector('body').insertAdjacentHTML('beforeend', html);
-}
-
-async function getHtml(file) {
-  const res = await fetch(chrome.runtime.getURL(file));
-  return await res.text();
+  if (await getIsFilterEnabled()) {
+    await applyFilters();
+    await menu.render();
+  }
 }
 
 main();

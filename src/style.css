@@ -196,7 +196,7 @@
 }
 
 /* From original website */
-.ruekaf-pro-badge {
+.ruekaf-top-badge {
   text-size-adjust: 100%;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   list-style-type: none;
@@ -206,13 +206,12 @@
   -webkit-box-sizing: border-box;
   line-height: normal;
   color: var(--kds-sema-color-on-primary);
-  background-color: var(--kds-sema-color-primary);
+  background-color: #5A33AE;
   font-weight: normal;
   letter-spacing: 1px;
-  margin: 0px 8px 0px 0px;
   font-size: 10px;
-  border-radius: var(--kds-sema-border-radius-badge);
-  padding: 4px 8px;
+  border-radius: 2px;
+  padding: 4px 2px 2px 2px;
 }
 
 /* From original website */

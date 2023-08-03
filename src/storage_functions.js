@@ -30,10 +30,10 @@ async function setBadWords(words) {
 }
 
 
-async function getRemoveProAds() {
+async function getHideTopAds() {
   return (await loadFromStorage('removeProAds')) ?? false;
 }
 
-async function setRemoveProAds(val) {
+async function setHideTopAds(val) {
   await saveToStorage('removeProAds', val);
 }

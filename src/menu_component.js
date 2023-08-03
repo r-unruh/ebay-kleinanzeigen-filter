@@ -1,13 +1,11 @@
 class MenuComponent {
-  #filterApplier;
   #settingsComponent;
 
-  constructor(selector, filterApplier, settingsComponent) {
+  constructor(selector, settingsComponent) {
     this.element = document.querySelector(selector)
         .content.firstElementChild.cloneNode(true);
     document.querySelector('body').appendChild(this.element);
 
-    this.#filterApplier = filterApplier;
     this.#settingsComponent = settingsComponent;
 
     this.element.querySelector('img').src =
@@ -27,7 +25,7 @@ class MenuComponent {
     this.element.querySelector('a[data-enable]')
         .addEventListener('click', async e => {
       e.preventDefault();
-      await this.#filterApplier.apply();
+      await applyFilters();
       await setIsFilterEnabled(true);
       await this.render();
     });
@@ -35,7 +33,7 @@ class MenuComponent {
     this.element.querySelector('a[data-disable]')
         .addEventListener('click', async e => {
       e.preventDefault();
-      this.#filterApplier.undo();
+      undoFilters();
       await setIsFilterEnabled(false);
       await this.render();
     });
@@ -50,6 +48,6 @@ class MenuComponent {
 
     if (enabled)
       this.element.querySelector('[data-filtered-count]').innerHTML
-          = this.#filterApplier.filteredCount;
+          = getFilteredCount();
   }
 }

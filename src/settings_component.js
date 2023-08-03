@@ -3,7 +3,7 @@ class SettingsComponent {
   #closeButton = null;
   #sortButton = null;
   #textArea = null;
-  #proFilterCheckbox = null;
+  #topFilterCheckbox = null;
   #events = {'update': []};
 
   constructor(selector) {
@@ -31,8 +31,8 @@ class SettingsComponent {
       }
     });
 
-    this.#proFilterCheckbox = this.element.querySelector('input[type="checkbox"]');
-    this.#proFilterCheckbox.addEventListener('change', e => {
+    this.#topFilterCheckbox = this.element.querySelector('input[type="checkbox"]');
+    this.#topFilterCheckbox.addEventListener('change', e => {
       this.#saveButtonHighlighted = true;
     });
 
@@ -67,7 +67,7 @@ class SettingsComponent {
   async #saveSettings() {
     this.#saveButtonHighlighted = false;
     await setBadWords(this.#badWordsFromTextarea);
-    await setRemoveProAds(this.#proFilterCheckbox.checked);
+    await setHideTopAds(this.#topFilterCheckbox.checked);
     for (const func of this.#events['update'])
       func();
   }
@@ -78,7 +78,7 @@ class SettingsComponent {
     this.#saveButtonHighlighted = false;
     this.element.hidden = false;
     this.#textArea.value = (await getBadWords()).join('\n');
-    this.#proFilterCheckbox.checked = await getRemoveProAds();
+    this.#topFilterCheckbox.checked = await getHideTopAds();
   }
 
   #sortTextarea() {
