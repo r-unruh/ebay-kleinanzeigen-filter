@@ -1,4 +1,4 @@
-const _hiddenClassName = 'ruekaf-hidden-item';
+const _hiddenClassName = 'rukaf-hidden-item';
 
 async function applyFilters() {
   hideAdsContaining(await getBadWords());

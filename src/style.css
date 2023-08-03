@@ -1,5 +1,5 @@
 /* From original website */
-.ruekaf {
+.rukaf {
   --kds-sema-border-radius-accordion: var(--kds-sema-border-radius-none);
   --kds-sema-border-radius-attention-badge: var(--kds-sema-border-radius-full);
   --kds-sema-border-radius-badge: var(--kds-sema-border-radius-large);
@@ -80,7 +80,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.ruekaf-container {
+.rukaf-container {
   position: fixed;
   margin: 1em;
   padding: 1em;
@@ -88,14 +88,14 @@
   background-color: #fff;
 }
 
-.ruekaf-menu {
+.rukaf-menu {
   display: flex;
   bottom: 0;
   left: 0;
   width: 256px;
 }
 
-.ruekaf-settings {
+.rukaf-settings {
   z-index: 10;
   top: 0;
   left: 50%;
@@ -106,7 +106,7 @@
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
 }
 
-.ruekaf-settings-overlay {
+.rukaf-settings-overlay {
   position: absolute;
   left: 0;
   right: 0;
@@ -115,28 +115,28 @@
   background-color: rgba(0, 0, 0, .25);
 }
 
-.ruekaf-menu-logo {
+.rukaf-menu-logo {
   margin-right: 1em;
 }
 
-.ruekaf-menu-logo img {
+.rukaf-menu-logo img {
   max-height: 48px;
 }
 
-.ruekaf-hidden-item {
+.rukaf-hidden-item {
   display: none !important;
 }
 
-.ruekaf-mb-0 {
+.rukaf-mb-0 {
   margin-bottom: 0;
 }
 
-.ruekaf-mt-0 {
+.rukaf-mt-0 {
   margin-top: 0;
 }
 
 /* From original website */
-.ruekaf-button {
+.rukaf-button {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     text-align: right;
     text-decoration: none;
@@ -161,7 +161,7 @@
 }
 
 /* From original website */
-.ruekaf-button-outline {
+.rukaf-button-outline {
   list-style-type: none;
   font: inherit;
   margin: 0;
@@ -196,7 +196,7 @@
 }
 
 /* From original website */
-.ruekaf-top-badge {
+.rukaf-top-badge {
   text-size-adjust: 100%;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   list-style-type: none;
@@ -215,7 +215,7 @@
 }
 
 /* From original website */
-.ruekaf-checkbox {
+.rukaf-checkbox {
   color: inherit;
   font: inherit;
   margin: 0;

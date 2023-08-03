@@ -5,8 +5,8 @@ async function main() {
   document.querySelector('body').insertAdjacentHTML('beforeend', html);
 
   // Setup components
-  const settingsComponent = new SettingsComponent('#ruekaf-settings');
-  const menu = new MenuComponent('#ruekaf-menu', settingsComponent);
+  const settingsComponent = new SettingsComponent('#rukaf-settings');
+  const menu = new MenuComponent('#rukaf-menu', settingsComponent);
 
   settingsComponent.addEventListener('update', async () => {
     if (await getIsFilterEnabled()) {

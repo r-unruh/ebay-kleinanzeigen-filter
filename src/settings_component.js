@@ -90,8 +90,8 @@ class SettingsComponent {
   }
 
   set #saveButtonHighlighted(highlighted) {
-    this.#saveButton.classList.toggle('ruekaf-button-outline', !highlighted);
-    this.#saveButton.classList.toggle('ruekaf-button', highlighted);
+    this.#saveButton.classList.toggle('rukaf-button-outline', !highlighted);
+    this.#saveButton.classList.toggle('rukaf-button', highlighted);
   }
 
   addEventListener(type, func) {this.#events[type].push(func);}
