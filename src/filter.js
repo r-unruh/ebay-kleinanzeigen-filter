@@ -1,7 +1,7 @@
 const _hiddenClassName = 'rukaf-hidden-item';
 
 async function applyFilters() {
-  hideAdsContaining(await getBadWords());
+  hideAdsByWords(await getBadWords());
 
   if (await getHideTopAds())
     hideTopAds();
@@ -12,13 +12,14 @@ async function applyFilters() {
   forceImageLoading();
 }
 
-function hideAdsContaining(words) {
+function hideAdsByWords(words) {
   getUserAds().forEach(e => {
-    const headerText = e.querySelector('h2').firstElementChild.innerText;
-    const searchableHeaderText = headerText.toLowerCase();
+    const header = e.querySelector('h2').firstElementChild.innerText;
+    const user = e.querySelector('.text-module-oneline span')?.innerText ?? '';
 
-    for (const word of words)
-      if (searchableHeaderText.includes(word.toLowerCase()))
+    for (const word of words.map(word => word.toLowerCase()))
+      if (header.toLowerCase().includes(word)
+          || user.toLowerCase().includes(word))
         e.classList.add(_hiddenClassName);
   });
 }
