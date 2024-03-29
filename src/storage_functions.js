@@ -1,11 +1,11 @@
 async function loadFromStorage(key) {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     chrome.storage.sync.get(key, result => {resolve(result[key]);});
   });
 }
 
 async function saveToStorage(key, value) {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     chrome.storage.sync.set({[key]: value}, resolve);
   });
 }
