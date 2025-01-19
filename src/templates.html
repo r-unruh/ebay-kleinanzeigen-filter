@@ -1,67 +1,40 @@
-<template id="rukaf-menu">
-  <div class="rukaf rukaf-menu rukaf-container">
-    <div class="rukaf-menu-logo">
-      <img src="." alt="Kleinanzeigen.de Filter">
+<template id="vimuser-sidebar-menu">
+  <section>
+    <header>
+      <h2 class="sectionheadline">Filter</h2>
+    </header>
+    <div class="browsebox-section-body">
+      <ul class="treelist browsebox-itemlist is-root">
+        <li>
+          <a class="text-link-subdued"
+            href="https://chromewebstore.google.com/detail/kleinanzeigende-filter/bekmapfnlkhaeopdmhglkanoobnglbhf">
+            Über den Filter
+          </a>
+        <li>
+        </ul>
     </div>
-    <div class="rukaf-menu-content">
-      <p class="rukaf-mt-0">
-        <strong data-message-filtered hidden>
-          <span data-filtered-count></span> Anzeigen rausgefiltert.
-        </strong>
-        <span data-message-disabled hidden>Filter deaktiviert.</span>
-      </p>
-      <p class="rukaf-mb-0">
-        <a href="#" data-edit>Filter bearbeiten</a>
-        |
-        <a href="#" data-enable hidden>aktivieren</a>
-        <a href="#" data-disable hidden>deaktivieren</a>
-      </p>
-    </div>
-  </div>
-</template>
+    <div class="browsebox-section-body">
+      <form action="">
+        <textarea style="width: 100%" rows="10"
+          placeholder="Suchbegriffe zum Rausfiltern hier eintragen.
 
-<template id="rukaf-settings">
-  <div class="rukaf rukaf-container rukaf-settings" hidden>
-    <form>
-      <h1 style="font-size: 1.5em">Filtereinstellungen</h1>
-      <p>
-        Hier kannst du Begriffe eintragen, um unerwünschte Artikel auszublenden.
-        Der Filter berücksichtigt die <b>Artikelbezeichnung</b> und, falls
-        angegeben, den <b style="white-space: nowrap"><span
-        class="rukaf-top-badge">PRO</span>-Benutzernamen</b> des
-        Erstellers.
-      </p>
-      <ul>
-        <li>Ein Begriff pro Zeile</li>
-        <li>Groß-/Kleinschreibung ist egal</li>
-      </ul>
-
-      <div class="formgroup">
-        <textarea name="" cols="30" rows="10" placeholder="Beispiel:
+Beispiele:
 porzellan
 kinderschuhe
-winterreifen
-..."></textarea>
-      </div>
+bücher"
+        ></textarea>
+        <button class="button-small">Speichern</button>
+      </form>
+    </div>
+  </section>
+</template>
 
-      <div style="text-align: right;">
-        <a href="#" data-sort> alphabet. sortieren</a>
-      </div>
+<template id="vimuser-stub">
+  <button class="vimuser-stub vimuser-hidden"></button>
+</template>
 
-      <h2>Weitere Optionen</h2>
-      <div class="formgroup">
-        <div class="formgroup-input" style="width: 100%;">
-          <label>
-            <input class="rukaf-checkbox" type="checkbox" value="true">
-            Alle <div class="rukaf-top-badge" style="margin-right: 4px;">TOP</div>-Anzeigen rausfiltern
-          </label>
-        </div>
-      </div>
-
-      <div style="text-align: right;">
-        <a class="rukaf-button-outline" href="#" data-save>Speichern</a> <a
-            class="rukaf-button-outline" href="#" data-close>Schließen</a>
-      </div>
-    </form>
-  </div>
+<template id="vimuser-fold-button">
+  <button type="button" class="vimuser-fold-button">
+    Ausblenden
+  </button>
 </template>

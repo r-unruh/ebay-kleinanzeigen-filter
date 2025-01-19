@@ -4,22 +4,35 @@ async function main() {
   const html = await res.text();
   document.querySelector('body').insertAdjacentHTML('beforeend', html);
 
-  // Setup components
-  const settingsComponent = new SettingsComponent('#rukaf-settings');
-  const menu = new MenuComponent('#rukaf-menu', settingsComponent);
+  // Load filters
+  await loadFilters();
 
-  settingsComponent.addEventListener('update', async () => {
-    if (await getIsFilterEnabled()) {
-      undoFilters();
-      await applyFilters();
-      await menu.render();
-    }
-  });
+  // Setup global components
+  new SidebarMenu();
 
-  if (await getIsFilterEnabled()) {
-    await applyFilters();
-    await menu.render();
+  // Setup ad components
+  // All user-ads have an h2 tag, so make sure all items contain it.
+  const elements = [...document
+    .querySelectorAll('.ad-listitem')]
+    .filter(e => e.querySelector('h2') !== null);
+  for (const e of elements) {
+    ADS.push(new AdComponent(e));
   }
+
+  applyFilters();
+
+  // Remove all sponsored ads
+  [...document.querySelectorAll('[data-liberty-position-name]')]
+    .map(e => e.parentElement)
+    .forEach(e => e.remove());
+
+  // Remove all highlighting from ads
+  [...document.querySelectorAll(".is-highlight")]
+    .forEach(e => e.classList.remove("is-highlight"));
+
+  // Move top ads to the bottom
+  [...document.querySelectorAll(".is-topad")]
+    .forEach(e => e.parentNode.appendChild(e));
 }
 
 main();
