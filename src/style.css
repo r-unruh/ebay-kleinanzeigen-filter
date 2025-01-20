@@ -23,7 +23,7 @@
 .vimuser-stub, .vimuser-stub:hover, .vimuser-stub:active {
   min-height: 0;
   height: auto;
-  display: inline;
+  display: inline-block;
   font-weight: normal;
   line-height: 1em;
   background-color: #fff;
@@ -32,5 +32,7 @@
   color: #666;
   padding: 0px 4px;
   border-radius: 0;
-  width: 100%;
+  width: calc(100% - 44px); /* Make room for TOP badge */
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
