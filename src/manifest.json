@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Kleinanzeigen.de Filter",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Filtert unerwünschte Ergebnisse aus der Suche von Kleinanzeigen.de heraus.",
   "author": "Rudolf Unruh",
   "icons": {"96": "images/icon_96.png"},
@@ -19,9 +19,15 @@
       "util.js",
       "ad_component.js",
       "sidebar_menu.js",
-      "content_script.js"
+      "on_search_results.js"
     ],
     "css": ["style.css"],
+    "run_at": "document_idle"
+  }, {
+    "matches": ["*://www.kleinanzeigen.de/*"],
+    "js": [
+      "on_any_page.js"
+    ],
     "run_at": "document_idle"
   }]
 }

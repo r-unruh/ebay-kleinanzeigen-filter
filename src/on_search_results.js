@@ -21,11 +21,6 @@ async function main() {
 
   applyFilters();
 
-  // Remove all sponsored ads
-  [...document.querySelectorAll('[data-liberty-position-name]')]
-    .map(e => e.parentElement)
-    .forEach(e => e.remove());
-
   // Remove all highlighting from ads
   [...document.querySelectorAll(".is-highlight")]
     .forEach(e => e.classList.remove("is-highlight"));
